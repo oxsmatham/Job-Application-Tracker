@@ -66,7 +66,7 @@ def draw_sankey(df):
         go.Sankey(
             node = dict(
                 label = label, 
-                pad = 15, 
+                pad = 40, 
                 thickness = 14
             ),
             link = dict(

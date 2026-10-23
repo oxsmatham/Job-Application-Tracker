@@ -3,6 +3,7 @@
 from datetime import datetime
 from DEFAULT import DEFAULT_RESUME_PATH
 import os.path
+import sys
 
 applications_file = "job_applications.tsv"
 
@@ -44,13 +45,22 @@ def check_for_database():
 		with open(applications_file, "w") as fout:
 			fout.write("\t".join(["Company", "Job_Title", "Date", "Status", "Link", "CV", "CL", "Location", "Salary", "Where"]) + "\n")
 
+def is_duplicate_entry(company, title):
+	with open(applications_file, "r") as f:
+		for line in f:
+			com, tit, dat, sta, lin, cv, cl, loc, sal, whe = line.split("\t")
+			if company.lower() in com.lower():
+				if title.lower() in tit.lower():
+					return True, line
+	return False, None
+
 def main():
 	
 	check_for_database()
 
 	Company = input("Company: ")
 	Job_Title = input("Job Title: ")
-	Date = input("Date (YYYY-DD-MM): ")
+	Date = input("Date (YYYY-MM-DD): ")
 	if Date == "":
 		Date = datetime.today().strftime("%Y-%m-%d")
 	Status = "applied"
@@ -62,6 +72,18 @@ def main():
 	Location = input("Job Location: ")
 	Salary = input("Salary: ")
 	Where = input("Where did you find this job? ")
+
+	is_duplicate, entry = is_duplicate_entry(Company, Job_Title)
+	if is_duplicate:
+		print("You probably already applied for the position!")
+		print(f"\t{entry}")
+				
+		continue_ = input("Continue or Exit? c/e:  ")
+		if continue_.lower() == "c":
+			pass
+		else:
+			sys.exit(0)
+
 
 	add_to_database(
 		Company,

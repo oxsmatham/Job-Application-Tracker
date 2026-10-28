@@ -60,6 +60,18 @@ def main():
 
 	Company = input("Company: ")
 	Job_Title = input("Job Title: ")
+
+	is_duplicate, entry = is_duplicate_entry(Company, Job_Title)
+	if is_duplicate:
+		print("You probably already applied for the position!")
+		print(f"\t{entry}")
+				
+		continue_ = input("Continue or Exit? c/e:  ")
+		if continue_.lower() == "c":
+			pass
+		else:
+			sys.exit(0)
+
 	Date = input("Date (YYYY-MM-DD): ")
 	if Date == "":
 		Date = datetime.today().strftime("%Y-%m-%d")
@@ -72,17 +84,6 @@ def main():
 	Location = input("Job Location: ")
 	Salary = input("Salary: ")
 	Where = input("Where did you find this job? ")
-
-	is_duplicate, entry = is_duplicate_entry(Company, Job_Title)
-	if is_duplicate:
-		print("You probably already applied for the position!")
-		print(f"\t{entry}")
-				
-		continue_ = input("Continue or Exit? c/e:  ")
-		if continue_.lower() == "c":
-			pass
-		else:
-			sys.exit(0)
 
 
 	add_to_database(

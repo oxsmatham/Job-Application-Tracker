@@ -28,7 +28,7 @@ st.title(page_title + " " + page_icon)
 tabs = st.tabs([
 	"Overview",
 	"Database",
-	"Settings"
+#	"Settings"
 ])
 
 with tabs[0]:

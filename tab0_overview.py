@@ -130,7 +130,7 @@ def main():
 
     pie_where = draw_pie(labels, values)
 
-    container1 = col1.container(border = True)
+    container1 = col1.container(border = True, horizontal_alignment = "center")
     container1.markdown("## Where did you find the Job?")
     container1.plotly_chart(pie_where, width = "content", key = "pie_where")
 
@@ -151,7 +151,7 @@ def main():
 
     pie_cl = draw_pie(labels, values)
 
-    container2 = col2.container(border = True)
+    container2 = col2.container(border = True, horizontal_alignment = "center")
     container2.markdown("## Did you attach a Cover Letter?")
     container2.plotly_chart(pie_cl, width = "content", key = "pie_cl")
 

@@ -39,8 +39,7 @@ def add_to_database(
 	
 
 def check_for_database():
-	if os.path.isfile(applications_file):
-		return
+	if os.path.isfile(applications_file): return
 	else:
 		with open(applications_file, "w") as fout:
 			fout.write("\t".join(["Company", "Job_Title", "Date", "Status", "Link", "CV", "CL", "Location", "Salary", "Where"]) + "\n")
@@ -75,6 +74,12 @@ def main():
 	Date = input("Date (YYYY-MM-DD): ")
 	if Date == "":
 		Date = datetime.today().strftime("%Y-%m-%d")
+
+	file_name = Date.replace(" ","_") +"-"+ Company.replace(" ","_") +"-"+ Job_Title.replace(" ","_")
+	print()
+	print(file_name)
+	print()
+
 	Status = "applied"
 	Link = input("Link to job position: ")
 	CV = input("File path to CV(Lebenslauf): ")

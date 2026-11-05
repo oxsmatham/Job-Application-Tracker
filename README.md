@@ -2,6 +2,10 @@
 
 A Python application built with Streamlit to help you manage and track your job applications in one place. It lets you record new applications and update their status as you progress through the hiring process.
 
+## Preview
+
+<img src="assets/img1.png" alt="Sankey_Overview" width="700">
+
 ## Features
 - Add new job application with relevant details such as:
   - Company name, Job title, Job location, etc.

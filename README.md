@@ -34,7 +34,8 @@ A Python application built with Streamlit to help you manage and track your job 
 
 ## Running the app
 Either use ```python3 run.py show | add | new```
-or directly use ```neu.py``` to add a new job application or ```update.py``` to update an existing job application
+or directly use ```neu.py``` to add a new job application or ```update.py``` to update an existing job application.
+You can also run ```streamlit run show.py```.
 
 ## License
 This project does not currently include a license file. Feel free to do whatever :)

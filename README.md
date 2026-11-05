@@ -39,6 +39,6 @@ or directly use ```neu.py``` to add a new job application or ```update.py``` to 
 ## License
 This project does not currently include a license file. Feel free to do whatever :)
 
-## Coming Soon
+## Future Plans
 - Custom setting tab for things like font-size and color
 - Salary visualization

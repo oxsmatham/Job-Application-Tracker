@@ -12,20 +12,6 @@ def load_data(data_file):
 	df = pd.read_csv(data_file, delimiter = "\t")
 	return df
 
-# def enter_application( Company, Job_Title, Date, Status, Link, CV, Cover_Letter, Location, Salary, Where):
-#     add_to_database(
-#         Company,
-#         Job_Title,
-#         Date,
-#         Status,
-#         Link,
-#         CV,
-#         Cover_Letter,
-#         Location,
-#         Salary,
-#         Where
-#     )
-
 def update_entry(database, idx, update):
     database.loc[int(idx), "Status"] = update
     database.to_csv(applications_file, sep = "\t", index = False)

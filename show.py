@@ -9,8 +9,8 @@ from DEFAULT import DEFAULT_RESUME_PATH
 from datetime import datetime
 
 import tab0_overview
-import tab1_database
-import tab2_settings
+import tab1_manage
+import tab2_view
 
 
 page_title = "Job Application Tracker"
@@ -27,7 +27,8 @@ st.title(page_title + " " + page_icon)
 
 tabs = st.tabs([
 	"Overview",
-	"Database",
+	"Manage",
+	"View",
 #	"Settings"
 ])
 
@@ -35,4 +36,7 @@ with tabs[0]:
 	tab0_overview.main()
 
 with tabs[1]:
-	tab1_database.main()
+	tab1_manage.main()
+
+with tabs[2]:
+    tab2_view.main()

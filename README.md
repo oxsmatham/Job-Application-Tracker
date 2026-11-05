@@ -4,7 +4,11 @@ A Python application built with Streamlit to help you manage and track your job 
 
 ## Preview
 
-<img src="assets/img1.png" alt="Sankey_Overview" width="700">
+<img src="assets/img1.png" alt="Sankey_Overview" width="100%">
+<img src="assets/img2.png" alt="Pie_Charts" width="100%">
+<img src="assets/img3.png" alt="Stats" width="100%">
+<img src="assets/img4.png" alt="Manage" width="100%">
+<img src="assets/img5.png" alt="View" width="100%">
 
 ## Features
 - Add new job application with relevant details such as:

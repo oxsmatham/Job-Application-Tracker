@@ -1,6 +1,6 @@
 # Job-Application-Tracker
 
-A Python application built with Streamlit to help you manage and track your job applications in one place. It lets you record new applications and update their status as you progress through the hiring process.
+A Python application built with Streamlit to help you manage and track your job applications in one place. It lets you record new applications and update their status as you progress through the hiring process. The data currently included in ```job_applications.tsv``` is AI-generated and serves as sample data for demonstration purposes only.
 
 ## Preview
 

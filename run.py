@@ -13,12 +13,12 @@ if __name__ == '__main__':
         arg = ""
     match arg:
         case "new":
-            subprocess.run(["streamlit", "run", "neu.py"])
+            subprocess.run(["python3", "neu.py"])
         case "update":
             subprocess.run(["python3", "update.py"])
         case "show":
-            subprocess.run(["python3", "show.py"])
+            subprocess.run(["streamlit", "run", "show.py"])
         case "s" | "summary":
-			subprocess.run(["python3", "summary.py"])
-		case _:
+            subprocess.run(["python3", "summary.py"])
+        case _:
             print(usage)

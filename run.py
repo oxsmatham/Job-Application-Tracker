@@ -15,8 +15,10 @@ if __name__ == '__main__':
         case "new":
             subprocess.run(["streamlit", "run", "neu.py"])
         case "update":
-            subprocess.run(["streamlit", "run", "update.py"])
+            subprocess.run(["python3", "update.py"])
         case "show":
-            subprocess.run(["streamlit", "run", "show.py"])
-        case _:
+            subprocess.run(["python3", "show.py"])
+        case "s" | "summary":
+			subprocess.run(["python3", "summary.py"])
+		case _:
             print(usage)

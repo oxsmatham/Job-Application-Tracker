@@ -1,4 +1,7 @@
 Bewerbungstracker2/
 DEFAULT.py
-job_applications1.tsv
 job_applications.tsv
+__pycache__/
+assets/.DS_Store
+dummy_data.tsv
+tests.py

@@ -4,7 +4,6 @@ import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
 from DEFAULT import DEFAULT_RESUME_PATH
-from datetime import datetime
 
 def load_data(data_file):
 	df = pd.read_csv(data_file, delimiter = "\t")
